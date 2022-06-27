@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selectors.byClassName;
 import static com.codeborne.selenide.Selenide.$;
 
 public class TrackPage {
+
     // локатор "Такого заказа нет"
     @FindBy(how = How.CLASS_NAME,using = "Track_NotFound__6oaoY")
     private SelenideElement trackNotFoundIcon;
@@ -17,6 +18,7 @@ public class TrackPage {
     public void isVisibleTrackNotFoundIcon() {
         trackNotFoundIcon.shouldBe(visible);
     }
+
     // метод ожидания загрузки страницы
     public void waitForLoadOrderPage(){
         $(byClassName("Track_NotFound__6oaoY")).shouldBe(visible);

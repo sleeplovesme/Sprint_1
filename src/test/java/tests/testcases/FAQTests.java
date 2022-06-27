@@ -15,6 +15,7 @@ import static com.codeborne.selenide.Selenide.open;
 // Важно написать отдельный тест на каждый вопрос.
 
 public class FAQTests {
+
     // порядковый номер локатора (элемента) аккордеона
     private final int FIRST_ELEMENT_OF_ACCORDION  = 0;
     private final int SECOND_ELEMENT_OF_ACCORDION  = 1;
@@ -36,6 +37,7 @@ public class FAQTests {
 
     MainPage mainPage;
     final String URL = "https://qa-scooter.praktikum-services.ru/";
+
     @Before
     public void openMainPage() {
         Configuration.startMaximized = true;
@@ -50,36 +52,43 @@ public class FAQTests {
         mainPage.clickAccordionElement(FIRST_ELEMENT_OF_ACCORDION);
         mainPage.compareText(FIRST_ELEMENT_OF_ACCORDION, FIRST_EXPECTED_TEXT);
     }
+
     @Test
     public void checkTextInSecondAccordionElement () {
         mainPage.clickAccordionElement(SECOND_ELEMENT_OF_ACCORDION);
         mainPage.compareText(SECOND_ELEMENT_OF_ACCORDION, SECOND_EXPECTED_TEXT);
     }
+
     @Test
     public void checkTextInThirdAccordionElement () {
         mainPage.clickAccordionElement(THIRD_ELEMENT_OF_ACCORDION);
         mainPage.compareText(THIRD_ELEMENT_OF_ACCORDION, THIRD_EXPECTED_TEXT);
     }
+
     @Test
     public void checkTextInFourthAccordionElement () {
         mainPage.clickAccordionElement(FOURTH_ELEMENT_OF_ACCORDION);
         mainPage.compareText(FOURTH_ELEMENT_OF_ACCORDION, FOURTH_EXPECTED_TEXT);
     }
+
     @Test
     public void checkTextInFifthAccordionElement () {
         mainPage.clickAccordionElement(FIFTH_ELEMENT_OF_ACCORDION);
         mainPage.compareText(FIFTH_ELEMENT_OF_ACCORDION, FIFTH_EXPECTED_TEXT);
     }
+
     @Test
     public void checkTextInSixthAccordionElement () {
         mainPage.clickAccordionElement(SIXTH_ELEMENT_OF_ACCORDION);
         mainPage.compareText(SIXTH_ELEMENT_OF_ACCORDION, SIXTH_EXPECTED_TEXT);
     }
+
     @Test
     public void checkTextInSeventhAccordionElement () {
         mainPage.clickAccordionElement(SEVENTH_ELEMENT_OF_ACCORDION);
         mainPage.compareText(SEVENTH_ELEMENT_OF_ACCORDION, SEVENTH_EXPECTED_TEXT);
     }
+
     @Test
     public void checkTextInEighthAccordionElement () {
         mainPage.clickAccordionElement(EIGHTH_ELEMENT_OF_ACCORDION);

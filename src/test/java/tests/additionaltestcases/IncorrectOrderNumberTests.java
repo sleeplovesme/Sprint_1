@@ -15,15 +15,18 @@ import static com.codeborne.selenide.Selenide.open;
 // На ней должно быть написано, что такого заказа нет.
 
 public class IncorrectOrderNumberTests {
+
     private final String ORDER_NUMBER = "123";
     MainPage mainPage;
     TrackPage trackPage;
     final String URL = "https://qa-scooter.praktikum-services.ru/";
+
     @Before
     public void openMainPage() {
         Configuration.startMaximized = true;
         mainPage = open(URL, MainPage.class);
     }
+
     @Test
     public void checkIncorrectOrderNumber () {
         mainPage.clickOrderStatusButton();

@@ -12,13 +12,16 @@ import static com.codeborne.selenide.Selenide.open;
 // 3) Проверить ошибки для всех полей формы заказа.
 
 public class ErrorsOfOrderPageTests {
+
     OrderPage orderPage;
     final String URL = "https://qa-scooter.praktikum-services.ru/order";
+
     @Before
     public void openOrderPage() {
         Configuration.startMaximized = true;
         orderPage = open(URL, OrderPage.class);
     }
+
     @Test
     public void checkErrorsOfOrderPageTest () {
         // ввести невалидный адрес

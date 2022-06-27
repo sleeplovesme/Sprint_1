@@ -33,8 +33,6 @@ public class MainPage {
     @FindBy(how = How.CLASS_NAME,using = "Header_Button__28dPO")
     private SelenideElement goButton;
 
-
-    // FirstPart
     // локатор текста Самокат на пару дней (Header)
     @FindBy(how = How.CLASS_NAME,using = "Home_Header__iJKdX")
     private SelenideElement headerText;
@@ -55,11 +53,6 @@ public class MainPage {
     @FindBy(how = How.CLASS_NAME,using = "Home_Column__xlKDK")
     private SelenideElement tableSubItem;
 
-
-    // SecondPart
-
-
-    // ThirdPart
     // локатор текста Как это работает
     @FindBy(how = How.CLASS_NAME,using = "Home_SubHeader__zwi_E")
     private SelenideElement HowItWorksText;
@@ -79,8 +72,6 @@ public class MainPage {
     @FindBy(how = How.CLASS_NAME,using = "Button_Middle__1CSJM")
     private SelenideElement orderSecondButton;
 
-
-    // FourPart
     // локатор текста Вопросы о важном
     @FindBy(how = How.CLASS_NAME,using = "Home_SubHeader__zwi_E")
     private SelenideElement questionsAboutImportantText;
@@ -91,15 +82,12 @@ public class MainPage {
     @FindBy(how = How.CLASS_NAME,using = "accordion__panel")
     private ElementsCollection accordionPanel;
 
-
     // Cookies
-    // локатор текста куки
     @FindBy(how = How.CLASS_NAME,using = "App_CookieText__1sbqp")
     private SelenideElement cookieText;
     // локатор кнопки куки (Да все привыкли)
     @FindBy(how = How.CLASS_NAME,using = "App_CookieButton__3cvqF")
     private SelenideElement cookieButton;
-
 
     // геттер элемента аккордеона
     public SelenideElement getAccordionHeading(int i) {
@@ -167,7 +155,4 @@ public class MainPage {
         // возвращаем экземпляр класса главной страницы
         return trackPage;
     }
-
-
-
 }

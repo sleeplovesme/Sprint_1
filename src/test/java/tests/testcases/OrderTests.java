@@ -21,6 +21,7 @@ import static com.codeborne.selenide.Selenide.open;
 // Нужно написать тесты с разными данными: минимум два набора. Какие именно данные использовать — на твоё усмотрение.
 
 public class OrderTests {
+
     // создаем объекты с параметрами
     Client ivanIvanov = new Client("Иван", "Иванов",
             "г. Москва, ул. Ивантеевская, д. 21", "Бульвар Рокоссовского",
@@ -31,6 +32,7 @@ public class OrderTests {
     MainPage mainPage;
     OrderPage orderPage;
     final String URL = "https://qa-scooter.praktikum-services.ru/";
+
     @Before
     public void openMainPage() {
         Configuration.startMaximized = true;
@@ -39,6 +41,7 @@ public class OrderTests {
         // если куки видны, кликнуть их
         mainPage.closeCookieMessage();
     }
+
     @Test
     public void orderScooterToIvanIvanov () {
         // кликнуть Заказать
@@ -63,6 +66,7 @@ public class OrderTests {
         orderPage.clickYesButton(); // кнопка Да
         orderPage.compareTextOrderPlaced("Заказ оформлен"); // проверка текста в модальном окне
     }
+
     @Test
     public void orderScooterToPetrPetrov () {
         // кликнуть Заказать

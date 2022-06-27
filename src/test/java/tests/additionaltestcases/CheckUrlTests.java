@@ -17,19 +17,23 @@ import static org.junit.Assert.assertEquals;
 // в новом окне откроется главная страница Яндекса.
 
 public class CheckUrlTests {
+
     MainPage mainPage;
     final String URL = "https://qa-scooter.praktikum-services.ru/";
+
     @Before
     public void openMainPage() {
         Configuration.startMaximized = true;
         mainPage = open(URL, MainPage.class);
     }
+
     @Test
     public void checkCurrentUrl () {
         mainPage.clickLogoScooterIcon();
         String currentUrl = WebDriverRunner.getWebDriver().getCurrentUrl();
         assertEquals(URL, currentUrl);
     }
+
     @Test
     public void checkCurrentUrlAfterSwitchTo () {
         mainPage.clickLogoYandexIcon();
